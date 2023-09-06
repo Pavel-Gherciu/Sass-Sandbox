@@ -1,0 +1,112 @@
+
+
+// FILTERED IMAGES
+
+@include breakpoint(0px 450px) {
+  //mobile portrait
+  .perfect-box {
+    width: calc(100% - 20px);
+  }
+}
+
+
+@include breakpoint(451px 768px) {
+  //mobile landscape
+  .perfect-box {
+    width: calc(50% - 20px);
+  }
+}
+
+
+@include breakpoint(769px 1024px) {
+  //tablet portrait
+  .perfect-box {
+    width: calc(100%/3 - 20px);
+  }
+}
+
+
+@include breakpoint(1025px 1200px) {
+  //tablet landscape
+  .perfect-box {
+    width: calc(25% - 20px);
+  }
+}
+
+
+
+@include breakpoint(1200px) {
+  //desktop
+  .perfect-box {
+    width: calc(100%/5 - 20px);
+  }
+}
+
+
+// @media only screen and (min-width: 0) and (max-width: 768px) {
+//   //mobile
+//   .perfect-box {
+//     width: calc(50% - 10px);
+
+//     &:nth-child(2n) {
+//       margin-right: 0;
+//     }
+//   }
+// }
+
+
+// @media only screen and (min-width: 769px) {
+//   //desktop
+//   .perfect-box {
+//     width: calc(25% - 15px);
+
+//     &:nth-child(4n) {
+//       margin-right: 0;
+//     }
+//   }
+// }
+
+
+
+// GRADIENTS
+
+
+@include breakpoint(0px 450px) {
+  //mobile portrait
+  .gradient-perfect-box {
+    width: calc(100% - 20px);
+  }
+}
+
+
+@include breakpoint(451px 768px) {
+  //mobile landscape
+  .gradient-perfect-box {
+    width: calc(50% - 20px);
+  }
+}
+
+
+@include breakpoint(769px 1024px) {
+  //tablet portrait
+  .gradient-perfect-box {
+    width: calc(100%/3 - 20px);
+  }
+}
+
+
+@include breakpoint(1025px 1200px) {
+  //tablet landscape
+  .gradient-perfect-box {
+    width: calc(25% - 20px);
+  }
+}
+
+
+@include breakpoint(1200px) {
+  //desktop
+  .gradient-perfect-box {
+    width: calc(100%/5 - 20px);
+  }
+}
+

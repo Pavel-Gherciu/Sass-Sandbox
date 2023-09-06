@@ -1,0 +1,115 @@
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?2x6wo3');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?2x6wo3#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?2x6wo3') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?2x6wo3') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?2x6wo3##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-box {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-color: gray;
+  display: inline-block;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.svg-icon-box {
+  position: relative;
+  height: 52px;
+  width: 52px;
+  background-color: gray;
+  display: inline-block;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.icon-font {
+  font-size: 30px;
+}
+
+.icon-steam2 {
+  &:before {
+    content: $icon-steam2; 
+  }
+}
+.icon-wordpress {
+  &:before {
+    content: $icon-wordpress; 
+  }
+}
+.icon-tumblr2 {
+  &:before {
+    content: $icon-tumblr2; 
+  }
+}
+.icon-finder {
+  &:before {
+    content: $icon-finder; 
+  }
+}
+.icon-windows8 {
+  &:before {
+    content: $icon-windows8; 
+  }
+}
+.icon-soundcloud2 {
+  &:before {
+    content: $icon-soundcloud2; 
+  }
+}
+.icon-skype {
+  &:before {
+    content: $icon-skype; 
+  }
+}
+.icon-linkedin {
+  &:before {
+    content: $icon-linkedin; 
+  }
+}
+.icon-paypal {
+  &:before {
+    content: $icon-paypal; 
+  }
+}
+.icon-html-five {
+  &:before {
+    content: $icon-html-five; 
+  }
+}
+
+
+
+.float-left {
+  float: left;
+}
+

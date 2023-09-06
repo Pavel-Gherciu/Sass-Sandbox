@@ -1,0 +1,109 @@
+.sidebar {
+  position: absolute;
+  width: 230px;
+  height: 1775px;
+  left: 0px;
+  border-right: $sidebar-borders;
+}
+
+.side-top-space {
+  padding-bottom: 100px;
+}
+
+.side-button-anchor {  
+  border-top: $sidebar-borders;
+  text-decoration: none;
+  color: $text-color1;
+  font-size: $side-button-font-size;
+  line-height: 19px;
+  width: 100%;
+  display:$side-button-display-settings;
+}
+
+.side-button-anchor-last {  
+  border-top: $sidebar-borders;
+  border-bottom: $sidebar-borders;
+  text-decoration: none;
+  color: $text-color1;
+  font-size: $side-button-font-size;
+  line-height: 19px;
+  width: 100%;
+  display:$side-button-display-settings;
+}
+
+.side-button-icon {
+  display:$side-button-display-settings;
+  margin-left: 108px;
+}
+
+.side-button-span{
+  display:$side-button-display-settings;
+  padding-left: $side-button-left;
+  padding-top: 16px;
+  padding-bottom: 13px;
+}
+
+.side-clicked-button-anchor {
+  border-left: 5px solid $side-button-clicked-color;
+  border-top: $sidebar-borders;
+  border-bottom: $sidebar-borders;
+  text-decoration: none;
+  color: $side-button-clicked-color;
+  font-size: $side-button-font-size;
+  line-height: 19px;
+  width: 100%;
+  display: $side-button-display-settings;
+}
+
+.side-clicked-button-span{
+  display: $side-button-display-settings;
+  padding-left: 19px;
+  padding-top: 16px;
+  padding-bottom: 13px;
+}
+
+.side-clicked-button-icon {
+  display: $side-button-display-settings;
+  margin-left: 78px;;
+}
+
+.dropdown {
+  font-size: 12px;
+  line-height: 18px;
+  display: $side-button-display-settings;
+}
+
+
+.dropdown-anchor {
+  text-decoration: none;
+  display: $side-button-display-settings;
+  width: 100%;
+}
+
+.dropdown-button1 {
+  color: $dropdown-text-color1;
+  padding-top: 17px;
+  padding-bottom: 4px;
+  padding-left: $side-button-left;
+  background-color: $dropdown-bgcolor;
+  display: block;
+}
+
+
+.dropdown-button {
+  color: $dropdown-text-color1;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: $side-button-left;
+  background-color: $dropdown-bgcolor;
+  display: block;
+}
+
+.dropdown-clicked-button {
+  color: $text-color2;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: $side-button-left;
+  background-color: $bg-color1;
+  display: block;
+}

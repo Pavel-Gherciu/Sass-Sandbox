@@ -1,0 +1,96 @@
+.transition-sheet {
+  position: relative;
+  height: 1000px;
+  background-color: $section-bgcolor;
+
+  &:hover {
+    .transition-box {
+      left: calc(100% - 105px);
+      opacity: 0;
+    }
+  }
+}
+
+.target-box {
+  background-image: url("../images/target.png");
+  background-size: 100%;
+  width: 94px;
+  height: 129px;
+  position: absolute;
+  right: 0;
+}
+
+.target-1 {
+  top: 0px;
+}
+
+.target-2 {
+  top: 150px;
+}
+
+.target-3 {
+  top: 300px;
+}
+
+.target-4 {
+  top: 450px;
+}
+
+.target-5 {
+  top: 600px;
+}
+
+.target-6 {
+  top: 750px;
+}
+
+.transition-box {
+  background-image: url("../images/bullet.png");
+  background-size: 100%;
+  width: 45px;
+  height: 23px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  // left: calc(100% - 50px);
+  // background-color: yellow;
+  // transition-property: left;
+  // transition-duration: 1s;
+  // transition-timing-function: linear;
+  // transition-delay: 500ms;
+  transition: left 1s, opacity 1s 1s;
+}
+
+.transition-linear {
+  top: 50px;
+  transition-timing-function: linear;
+}
+
+.transition-ease {
+  top: 200px;
+  transition-timing-function: ease;
+}
+
+.transition-ease-in {
+  top: 350px;
+  transition-timing-function: ease-in;
+}
+
+.transition-ease-out {
+  top: 500px;
+  transition-timing-function: ease-out;
+}
+
+
+.transition-ease-in-out {
+  top: 650px;
+  transition-timing-function: ease-in-out;
+}
+
+.transition-cubic-bezier {
+  top: 800px;
+  transition-timing-function: cubic-bezier(.75,.14,0,.73);
+}
+
+

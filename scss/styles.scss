@@ -1,0 +1,241 @@
+@import "reset";
+@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import "mixins";
+@import "variables";
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 
+  :root si variabilele listate cu "--" in fata declara variabila globala
+*/
+
+:root {
+  --sasha: #000;
+}
+
+.class {
+  background-color: var(--sasha, #fff);
+}
+
+
+.clearfix::after {
+  content:  "";
+  clear: both;
+  display: table;
+  overflow: hidden;
+}
+
+@include breakpoint(768px) {
+  body {
+    background: blue;
+  }
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/MyriadPro-Regular.eot');
+	src: local('Myriad Pro Regular'), local('MyriadPro-Regular'),
+		url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MyriadPro-Regular.woff') format('woff'),
+		url('../fonts/MyriadPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body {
+  background-color: #FFFFFF;
+  font-family: "Myriad Pro";
+}
+
+.main {
+  position: absolute;
+  left: 230px;
+  top: 107px;
+  width: 1300px;
+}
+
+.main-container {
+  padding-left: $space-from-side;
+}
+
+.component__title {
+  padding-top: 40px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  color: $main-text-color;
+}
+
+.first-section__title {
+  font-size: 34px;
+  color: $main-text-color;
+  padding-bottom: 11px;
+}
+
+.section__title {
+  font-size: 34px;
+  color: $main-text-color;
+  padding-top: 40px;
+  padding-bottom: 11px;
+}
+
+.perfect-box {
+  position: relative;
+  width: calc(25% - 15px);
+  float: left;
+  margin-right: 20px;
+
+  &::before {
+    content: "";
+    display: block;
+  }
+}
+
+.filter-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
+
+.col-content {
+  height: 50px;
+  background: pink;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-item {
+  background-color: pink;
+  border: 3px solid black;
+}
+
+/*
+
+// Aranjeaza itemii pe "main axis" (axa principala)
+justify-content: flex-start(d), flex-end, center, space-around, space-between, space-evenly;
+
+// Aranjeaza itemii pe "cross axis" (axa secundara)
+align-items: stratch(d), flex-start, flex-end, center, space-around, space-between, space-evenly;
+
+// Seteaza axa principala sa fie pe orizontala (row) sau verticala (column)
+flex-direction: row(d), "column", row-reverse, column-reverse;
+
+// Seteaza ca toate elementele sa fie forțate într-un singur rând sau permite "ruperea rândurilor"
+flex-wrap: nowrap(d), wrap, wrap-reverse;
+
+// Shorthand pentru direction si wrap
+flex-flow: <flex-direction> <flex-wrap>, de ex: flex-flow: row nowrap;
+
+// Aliniaza ansamblul din mai multe randuri ca ele toate impreuna sa se alinieze intr-o directie (nu lucreaza daca este doar un singur rand)
+align-content: flex-start(d), flex-end, center, space-around, space-between, space-evenly;
+
+
+Definitii pentru Flex Item properties:
+
+// Seteaza ordinea elementului, initial toate sunt 0
+order: 0
+
+// Rescrie "align-items" doar pentru un element anume
+align-self: stratch(d), flex-start, flex-end, center, space-around, space-between, space-evenly;
+
+// "Proportia" sau "partea" cu care elementul trebuie sa creasca in raport cu restul elementelor in rand (creasca = sa ocupe spatiul liber ramas)
+flex-grow: 0, 1, 2, etc.
+
+// "Proportia" sau "partea" cu care elementul trebuie sa se micsoreze in raport cu restul elementelor in rand
+flex-shrink: 0, 1, 2, etc.
+
+// Marimiea minimala care va fi asignata elementului inainte de a incepe sa imparta spatiul liber ramas tuturor elementelor.
+flex-basis: <width>, ex: "50%" sau "30px"
+*/
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    /* Retina-specific stuff here */
+}
+
+
+@media (orientation: landscape) {
+  .perfect-box::before {
+    padding-top: 56.25%;
+  }
+}
+
+
+@media (orientation: portrait) {
+  .perfect-box::before {
+    padding-top: 100%;
+  }
+}
+
+
+.transform-box {
+  width: 300px;
+  height: 300px;
+  border: 3px solid black;
+  background-color: red;
+}
+
+//translate() va fi inteles ca 2d, translate3d() va fi inteles ca 3d unde putem pune z in shorthand;
+
+
+
+//translate muta pozitionarea elementului pe o axa pastrand locul de origine 
+// valorile procentuale la translate se vor calcula din baza marimilor elementului propriu zis
+.transform-box--translate {
+  transform: translate3d(50%, 50%, 30px);
+}
+
+// functiile shorthand (translate) transformului accepta si varianta cu un parametru 
+// daca este un singur parametru atunci se presupune ca transformarea e doar pe x;
+
+.transform-box--rotate {
+  transform: rotate(95deg);
+}
+
+// scale scaleaza mareste un element conform unui coeficient din marimea initiala
+.transform-box--scale {
+  transform: scale(0.5);
+}
+
+// skew: distortioneaza elementul pe laturele unei axe (il face paralelipiped)
+.transform-box--skew {
+  transform: skew(45deg);
+}
+
+// @keyframes sasha {
+//   from {
+//     left: 0;
+//   }
+
+//   to {
+//     left: calc(100% - 150px);
+//   }
+// }
+
+
+
+
+
+
+// @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "components/filters";
+@import "components/gradients";
+@import "sidebar";
+@import "resolutions";
+@import "icons";
+@import "topbar";
+@import "transitions";
+@import "animation";
